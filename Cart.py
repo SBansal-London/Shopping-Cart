@@ -42,10 +42,8 @@ while (done) :
         shopping_cart(list_item , list_cost)
 
     elif p==3:
-        total_cost = 0
-        for costs in list_cost :
-            total_cost +=int(costs)
-        print(f"Thank you for shopping. Your total cost is {total_cost}")
+       
+        print("Thank you for shopping")
         done = False
     
     else :
