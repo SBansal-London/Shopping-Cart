@@ -22,7 +22,8 @@ while (done) :
     print("Would you like to :")
     print("1. Add an item to your cart")
     print("2. Remove an item from your cart")
-    print("3. Checkout")
+    print("3. Update an item in your cart")
+    print("4. Checkout")
     p = int(input("Enter the number of the option you would like to choose : "))
 
     if p==1:
@@ -42,6 +43,14 @@ while (done) :
         shopping_cart(list_item , list_cost)
 
     elif p==3:
+        update_item = input("What item would you like to update :")
+        update_pos = list_item.index(update_item)
+        update_cost = input(f"Enter the updated cost of {update_item} :")
+        list_cost[update_pos] = update_cost
+        print(f" cost for {update_item} has been updated in your cart successfully\n")
+        shopping_cart(list_item , list_cost)
+
+    elif p==4:
         total_cost = 0
         for costs in list_cost :
             total_cost +=int(costs)
